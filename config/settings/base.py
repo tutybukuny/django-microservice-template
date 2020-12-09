@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from core.utils import load_json_file
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -144,3 +146,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # LANGUAGE_CODE = 'vi'
 
 SILENCED_SYSTEM_CHECKS = ["fields.W904", "fields.W340"]
+
+JSON_CONFIG_FILE = os.getenv("JSON_CONFIG_FILE", "./config/config.json")
+JSON_CONFIG = load_json_file(JSON_CONFIG_FILE)

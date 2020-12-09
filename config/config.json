@@ -1,0 +1,8 @@
+{
+  "sync_channels": {
+    "user": "user_channel"
+  },
+  "service_names": {
+    "user": "user_service"
+  }
+}
